@@ -21,9 +21,9 @@ class User:
         order = "name"
         res = requests.get(link, params={"access_token": self.token, "v": self.version})
         if res.status_code == 200:
-            return f" Всё прошло успешно! \n Статус кода: {res.status_code} \n ваши друзья: {res.json()}"
+            return f" Всё успешно прошло! \n Статус кода: {res.status_code} \n ваши друзья: {res.json()}"
         else:
-            return f"Произошла ошибка! \n Код ошибки: {res.status_code}"
+            return f"Произошла какая-то ошибка! \n Код ошибки: {res.status_code}"
 
 
 if __name__ == "__main__":
